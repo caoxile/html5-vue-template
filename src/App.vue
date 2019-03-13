@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col-lg-2">
             <div class="logo-area">
-              <a href="index.html"><img src="static/assets/images/logo-light.png" alt="logo"></a>
+              <router-link to="/"><img src="static/assets/images/logo-light.png" alt="logo"></router-link>
             </div>
           </div>
           <div class="col-lg-10">
@@ -26,20 +26,20 @@
               <ul>
                 <li class="active"><router-link to="/">home</router-link></li>
                 <li><router-link to="/about">about us</router-link></li>
-                <li><a href="job-category.html">category</a></li>
+                <li><router-link to="/category">category</router-link></li>
                 <li><a href="#">blog</a>
                   <ul class="sub-menu">
-                    <li><a href="blog-home.html">Blog Home</a></li>
-                    <li><a href="blog-details.html">Blog Details</a></li>
+                    <li><router-link to="/blog">Blog Home</router-link></li>
+                    <li><router-link to="/blogDetails">Blog Details</router-link></li>
                   </ul>
                 </li>
-                <li><a href="contact-us.html">contact</a></li>
+                <li><router-link to="/contact">contact</router-link></li>
                 <li><a href="#">pages</a>
                   <ul class="sub-menu">
-                    <li><a href="job-search.html">Job Search</a></li>
-                    <li><a href="job-single.html">Job Single</a></li>
-                    <li><a href="pricing-plan.html">Pricing Plan</a></li>
-                    <li><a href="elements.html">Elements</a></li>
+                    <li><router-link to="/jobSearch">Job Search</router-link></li>
+                    <li><router-link to="/jobSingle">Job Single</router-link></li>
+                    <li><router-link to="/pricingPlan">Pricing Plan</router-link></li>
+                    <li><router-link to="/elements">Elements</router-link></li>
                   </ul>
                 </li>
                 <li class="menu-btn">
@@ -56,7 +56,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
-            <h2>About Us</h2>
+            <h2>Comport</h2>
             <p>There spirit beginning bearing the open at own every give appear in third you sawe two boys</p>
           </div>
         </div>
