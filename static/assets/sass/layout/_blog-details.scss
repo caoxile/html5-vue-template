@@ -1,0 +1,86 @@
+/* 25. Blog Details */
+
+
+.nav-area{
+	border-bottom: 1px solid #eee;
+	a{
+		color:$body-text;
+	}
+	.nav-left{
+		.thumb{
+			padding-right: 20px;
+		}
+	}
+	.nav-right{
+		text-align:right;
+			.thumb{
+				padding-left: 20px;
+			}		
+	}
+
+	@media(max-width:768px){
+		.post-details h4{
+			font-size: 14px;
+		}
+
+	}
+
+	@media(max-width:466px){
+		.nav-right{
+			margin-top:50px;
+		}
+	}
+}
+
+.comment-sec-area{
+	border-bottom:1px solid #eee;
+	padding-bottom:50px;
+	a{
+		color:$body-text;
+	}
+	.comment-list{
+		padding-bottom:30px;
+		&.left-padding{
+			padding-left:25px;
+		}
+	}
+
+	.thumb{
+		margin-right:20px;
+	}
+	.date{
+		font-size:13px;
+		color:#cccccc;
+	}
+	.comment{
+		color:#777777;
+	}
+	.btn-reply{
+		background-color:$primary-color;
+		color: $light;	
+		border:1px solid $border;
+		padding: 8px 30px;	
+		display:block;
+		@include transition();
+		&:hover{
+			background-color:transparent;
+			color: $heading-text;
+		}	
+	}
+}
+
+.generic-blockquote {
+    padding: 40px;
+    background: $dark;
+    margin: 50px 0;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: $primary-color;
+        content: '';
+    }
+}

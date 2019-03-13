@@ -1,0 +1,31 @@
+/* 19. Job Single */
+.single-content2,
+.single-content3,
+.single-content4,
+.single-content5, 
+.single-content6 {
+    border-bottom: 1px solid $border;
+}
+.single-content4 {
+    ul {
+        list-style: inherit;
+        padding-left: 50px;
+    }
+}
+.single-content7 {
+    ul {
+        list-style: inherit;
+        padding-left: 20px;
+    }
+}
+.sidebar {
+    .single-item {
+        padding: 30px;
+        background: $dark;
+    }
+}
+.newsletter-area.job-single {
+    &:after {
+        background: $overlay2;
+    }
+}

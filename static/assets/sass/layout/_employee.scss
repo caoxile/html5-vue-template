@@ -1,0 +1,72 @@
+/* 11. Employee */
+.single-slide {
+    &:hover {
+        .hover-state {
+            @include opacity(1);
+            visibility: visible;
+        }
+    }
+}
+.slide-img {
+    width: 100%;
+    height: 210px;
+    background: $placeholder;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    @include tablet() {
+        height: 280px;
+    }
+    @include portrait-phone() {
+        height: 260px;
+    }
+    .hover-state {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $overlay2;
+        @include transition(.5s);
+        @include opacity(0);
+        visibility: hidden;
+        .hover-text {
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            h3,
+            h5 {
+                color: $light;
+            }
+        }
+    }
+}
+.employee1 {
+    background-image: url('../images/employee1.jpg');
+}
+.employee2 {
+    background-image: url('../images/employee2.jpg');
+}
+.slide-text {
+    padding: 30px 30px 15px;
+    position: relative;
+    background: $light;
+    @include box-shadow(0 7px 20px $shadow);
+    margin-left: -10px;
+    margin-right: 10px;
+    @include portrait-phone() {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    i {
+        color: $primary-color;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 20px;
+        @include opacity(.7);
+    }
+}

@@ -1,18 +1,75 @@
-///
-/// Editorial by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
-/* Footer */
-
-	#footer {
-		.copyright {
-			color: _palette(fg-light);
-			font-size: 0.9em;
-
-			a {
-				color: inherit;
-			}
-		}
-	}
+/* 14. Footer */
+.footer-area {
+    color: $light;
+    background: $footer;
+    h3 {
+        color: $light;
+    }
+    a {
+        color: $light;
+        text-transform: capitalize;
+    }
+    input {
+        display: inline-block;
+        margin: auto;
+        width: 250px;
+        border: none;
+        @include border-radius(5px);
+        padding: 13px 20px;
+        @include landscape-phone() {
+            width: 250px;
+        }
+        @include portrait-phone() {
+            width: 100%;
+        }
+    }
+    .template-btn {
+        margin-left: 10px;
+        @include portrait-phone() {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
+    img {
+        width: 55px;
+        height: 55px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+}
+.footer-copyright {
+    margin-top: 70px;
+    .color {
+        color: $primary-color;
+    }
+    ul {
+        float: right;
+        @include landscape-phone() {
+            float: left;
+            margin-top: 30px;
+        }
+        @include portrait-phone() {
+            float: left;
+            margin-top: 30px;
+        }
+        li {
+            display: inline;
+            margin-left: 10px;
+            i {
+                display: inline-block;
+                padding: 10px;
+                color: $body-text;
+                background: $light;
+                height: 40px;
+                width:40px;
+                text-align: center;
+                line-height: 20px;
+                @include transition(.3s);
+                &:hover {
+                    color: $light;
+                    background: $primary-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+/* 12. News */
+.single-news {
+    &:hover {
+        a {
+            color: $primary-color;
+        }
+    }
+}
+.news-img {
+    width: 100%;
+    height: 280px;
+    background-color: $placeholder;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include border-radius(5px);
+}
+.news-img1 {
+    background-image: url('../images/news1.jpg');
+}
+.news-img2 {
+    background-image: url('../images/news2.jpg');
+}
+.news-img3 {
+    background-image: url('../images/news3.jpg');
+}
+.news-tag {
+    li {
+        display: inline-block;
+        i {
+            font-size: 14px;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+        }
+    }
+    span {
+        width: 1px;
+        height: 12px;
+        background: $body-text;
+        display: block;
+    }
+}
+.news-title {
+    a {
+        color: $heading-text;
+        @include transition(.5s);
+    }
+}

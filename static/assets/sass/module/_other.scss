@@ -1,0 +1,31 @@
+/* 17. Other */
+.section-padding {
+    padding: 140px 0;
+}
+.section-padding2 {
+    padding-top: 140px;
+}
+.section-padding3 {
+    padding-bottom: 140px;
+}
+.section-top {
+    margin-bottom: 80px;
+    p {
+        font-style: italic;
+    }
+}
+.tab-item {
+    li {
+        color: $heading-text;
+        font-family: $body-font;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        cursor: pointer;
+        @include transition(.5s);
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+/* 15. Button */
+.template-btn {
+    color: $light!important;
+    background: $primary-color;
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 30px!important;
+    @include border-radius(3px);
+    @include transition(all .5s);
+    &:hover {
+        background: $social;
+    }
+}
+.secondary-btn {
+    color: $heading-text;
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    @include transition(all .5s);
+    &:hover {
+        color: $primary-color;
+        span:before {
+            margin-left: 14px;
+            color: $primary-color;
+        }
+    }
+    span:before {
+        font-size: 14px;
+        margin-left: 10px;
+        @include transition(.2s);
+    }
+}
+.third-btn {
+    color: $light!important;
+    background: $primary-color;
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 24px!important;
+    @include border-radius(3px);
+    @include transition(all .5s);
+    &:hover {
+        background: $heading-text;
+    }
+}
+.forth-btn {
+    color: $heading-text;
+    background: transparent;
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid $primary-color;
+    display: inline-block;
+    padding: 10px 24px!important;
+    @include border-radius(3px);
+    @include transition(all .5s);
+    &:hover {
+        color: $light;
+        background: $footer;
+        border: 1px solid transparent;
+    }
+}
+form {
+    .template-btn {
+        border: none;
+    }
+}
+.download-btn {
+    padding: 16px 24px 6px;
+    max-width: 225px;
+    margin-right: 20px;
+    border: 1px solid $border;
+    background-color: $light;
+    @include border-radius(5px);
+    @include transition(.5s);
+    @include portrait-phone() {
+        display: block;
+    }
+    &:hover {
+        background: $primary-color;
+        border: 1px solid transparent;
+        a,
+        i {
+            color: $light;
+        }
+    }
+    a {
+        color: $heading-text;
+    }
+    i {
+        font-size: 44px;
+        padding-right: 20px;
+        color: $primary-color;
+        margin-top: -8px;
+    }
+    p {
+        margin-bottom: 8px !important;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: left;
+        font-weight: 600;
+    }
+    span {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+.sidebar-btn {
+    color: $heading-text;
+    background: $light;
+    border: 1px solid $border;
+    display: inline-block;
+    padding: 12px 20px;
+    width: 100%;
+    @include transition(.5s);
+    &:hover {
+        color: $light;
+        background: $primary-color;
+        border: 1px solid transparent;
+    }
+}

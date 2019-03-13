@@ -1,0 +1,146 @@
+/* 9. Jobs */
+.jobs-title {
+    margin-bottom: 40px;
+}
+.jobs-tab {
+    margin-bottom: 40px;
+    text-align: right;
+    float: right;
+    @include portrait-phone() {
+        text-align: left;
+        float: left;
+    }
+    li {
+        display: inline-block;
+        padding: 3px 0;
+        margin-left: 40px;
+        position: relative;
+        @include portrait-phone() {
+            margin-left: 0;
+            margin-right: 24px;
+            margin-bottom: 10px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 1px;
+            background: $heading-text;
+            @include transition(.5s);
+            @include opacity(0);
+            visibility: hidden;
+        }
+        &:hover {
+            &:after {
+                @include opacity(1);
+                visibility: visible;
+            }
+        }
+    }
+    .active {
+        color: $primary-color;
+        &:after {
+            @include opacity(1);
+            visibility: visible;
+        }
+    }
+}
+.single-job {
+    padding: 40px 50px;
+    background: $dark;
+    @include landscape-phone() {
+        padding: 40px 30px;
+    }
+    @include portrait-phone() {
+        padding: 40px 20px;
+    }
+    @include border-radius(3px);
+    @include transition(.5s);
+    &:hover {
+        background: $light;
+        @include box-shadow(0 10px 20px $shadow);
+    }
+    .job-text {
+        i {
+            font-size: 14px;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+        }
+    }
+    .job-img {
+        @include tablet() {
+            margin: 30px 0;
+        }
+        @include landscape-phone() {
+            margin: 30px 0;
+        }
+        @include portrait-phone() {
+            margin: 30px 0;
+        }
+    }
+    .job-btn {
+        text-align: center;
+        @include tablet() {
+            text-align: left;
+        }
+        @include landscape-phone() {
+            text-align: left;
+        }
+        @include portrait-phone() {
+            text-align: left;
+        }
+        .job-btn1 {
+            margin-bottom: 10px;
+            display: block;
+            background: #00afed;
+            &:hover {
+                background: $heading-text;
+            }
+            @include tablet() {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            @include landscape-phone() {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            @include portrait-phone() {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+        .job-btn2 {
+            @extend .job-btn1;
+            background: #cc2229;
+        }
+        .job-btn3 {
+            @extend .job-btn1;
+            background: #0088cc;
+        }
+        .job-btn4 {
+            @extend .job-btn1;
+            background: #2dc100;
+        }
+    }
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: $primary-color;
+}
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+.nav-link {
+    color: $heading-text;
+    display: block;
+    padding: 0;
+}
+.nav-tabs {
+    border-bottom: none;
+}

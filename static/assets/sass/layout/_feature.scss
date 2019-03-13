@@ -1,0 +1,12 @@
+/* 7. Feature */
+.feature-area {
+    .single-feature {
+        padding: 40px;
+        background: $dark;
+        @include transition(.3s);
+        &:hover {
+            background: $light;
+            @include box-shadow(0px 10px 30px $shadow);
+        }
+    }
+}

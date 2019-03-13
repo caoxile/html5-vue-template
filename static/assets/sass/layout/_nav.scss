@@ -1,0 +1,161 @@
+/* 3. Main Menu */
+.main-menu {
+    ul {
+        float: right;
+        @include tablet() {
+            display: none;
+            float: left;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 4;
+            background: $dark;
+            width: 100%;
+            padding: 20px 20px 30px;
+        }
+        @include landscape-phone() {
+            display: none;
+            float: left;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 4;
+            background: $dark;
+            width: 100%;
+            padding: 20px 20px 30px;
+        }
+        @include portrait-phone() {
+            display: none;
+            float: left;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 4;
+            background: $dark;
+            width: 100%;
+            padding: 20px 20px 30px;
+        }
+        li {
+            display: inline;
+            position: relative;
+            @include tablet() {
+                display: block;
+            }
+            @include landscape-phone() {
+                display: block;
+            }
+            @include portrait-phone() {
+                display: block;
+            }
+            a {
+                color: $heading-text;
+                font-family: $body-font;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                display: inline-block;
+                padding: 15px;
+            }
+            &:hover {
+                ul.sub-menu {
+                    @include opacity(1);
+                    visibility: visible;
+                    top: 100%;
+                    left: 30px;
+                }
+            }
+            ul.sub-menu {
+                padding: 10px;
+                @include opacity(0);
+                visibility: hidden;
+                position: absolute;
+                top: 250%;
+                left: 0;
+                width: 250px;
+                background: $dark;
+                z-index: 5;
+                @include transition(.5s);
+                li {
+                    display: block;
+                    a {
+                        @include transition(.3s);
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-btn {
+        display: inline;
+        margin-left: 60px;
+        @include desktop() {
+            margin-left: 0;
+        }
+        @include tablet() {
+            margin-left: 0;
+            .login {
+                display: block;
+            }
+        }
+        @include landscape-phone() {
+            margin-left: 0;
+            .login {
+                display: block;
+            }
+        }
+        @include portrait-phone() {
+            margin-left: 0;
+            .login {
+                display: block;
+            }
+        }
+    }
+}
+.main-menu.main-menu-light {
+    ul {
+        @include tablet() {
+            background: $footer;
+        }
+        @include landscape-phone() {
+            background: $footer;
+        }
+        @include portrait-phone() {
+            background: $footer;
+        }
+        ul.sub-menu {
+            background: $footer;
+        }
+    }
+    a {
+        color: $light;
+    }
+}
+.custom-navbar {
+    position: absolute;
+    top: -42px;
+    right: 15px;
+    background: $primary-color;
+    padding: 7px 10px;
+    @include border-radius(3px);
+    @include transition(.2s);
+    cursor: pointer;
+    display: none;
+    @include tablet() {
+        display: block;
+    }
+    @include landscape-phone() {
+        display: block;
+    }
+    @include portrait-phone() {
+        display: block;
+    }
+    span {
+        background: $light;
+        display: block;
+        width: 30px;
+        margin: 6px 0;
+        height: 2px;
+    }
+}

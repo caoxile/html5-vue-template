@@ -1,0 +1,55 @@
+/* 21. Pricing Plan */
+.single-table {
+    @include box-shadow(0 0 10px $shadow);
+    padding-bottom: 40px;
+    &:hover {
+        @include box-shadow(0 10px 20px $shadow);
+        .table-top {
+            background: $primary-color;
+            h3,
+            i {
+                color: $light;
+            }
+        }
+    }
+    .table-top {
+        background: $dark;
+        padding: 40px 0;
+        border-bottom: 1px solid $border;
+        @include transition(.5s);
+        i {
+            font-size: 50px;
+            color: $primary-color;
+            margin-top: 10px;
+        }
+    }
+    .template-btn {
+        color: $heading-text!important;
+        background: $dark;
+        &:hover {
+            color: $light!important;
+            background: $primary-color;
+        }
+    }
+}
+.single-box1 {
+    padding: 70px 50px;
+    background: $primary-color;
+    h3,
+    p {
+        color: $light;
+    }
+    .template-btn {
+        background: $pricing-btn;
+    }
+}
+.single-box2 {
+    @extend .single-box1;
+    background: $social;
+    .template-btn {
+        border: 1px solid transparent;
+        &:hover {
+            border: 1px solid $primary-color;
+        }
+    }
+}

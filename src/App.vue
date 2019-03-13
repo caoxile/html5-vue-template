@@ -1,117 +1,141 @@
 <template>
-<div class="app">
-  <!--<div class="header">-->
-  <!--<header-bar></header-bar>-->
-  <!--</div>-->
-  <!--<div class="page">-->
-    <!--<router-view></router-view>-->
-    <!--<div class="help-text">-->
-      <!--<p>Vue.js 2 Single Page App (SPA) Example with vuex and vue-router.</p>-->
-      <!--<a href="https://github.com/skyronic/vue-spa">View Source Code</a>-->
-    <!--</div>-->
-  <!--</div>-->
-  <div id="wrapper">
+<div>
+  <!-- Preloader Starts -->
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
+  <!-- Preloader End -->
 
-    <!-- Main -->
-    <div id="main">
-      <div class="inner">
-
-        <!-- Header -->
-        <header id="header">
-          <a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
-          <ul class="icons">
-            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
-          </ul>
-        </header>
-
-        <router-view></router-view>
-
+  <!-- Header Area Starts -->
+  <header class="header-area single-page">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="logo-area">
+              <a href="index.html"><img src="static/assets/images/logo-light.png" alt="logo"></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="custom-navbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="main-menu main-menu-light">
+              <ul>
+                <li class="active"><router-link to="/">home</router-link></li>
+                <li><router-link to="/about">about us</router-link></li>
+                <li><a href="job-category.html">category</a></li>
+                <li><a href="#">blog</a>
+                  <ul class="sub-menu">
+                    <li><a href="blog-home.html">Blog Home</a></li>
+                    <li><a href="blog-details.html">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact-us.html">contact</a></li>
+                <li><a href="#">pages</a>
+                  <ul class="sub-menu">
+                    <li><a href="job-search.html">Job Search</a></li>
+                    <li><a href="job-single.html">Job Single</a></li>
+                    <li><a href="pricing-plan.html">Pricing Plan</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                  </ul>
+                </li>
+                <li class="menu-btn">
+                  <a href="#" class="login">log in</a>
+                  <a href="#" class="template-btn">sign up</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="page-title text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2>About Us</h2>
+            <p>There spirit beginning bearing the open at own every give appear in third you sawe two boys</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header Area End -->
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-      <div class="inner">
+  <router-view></router-view>
 
-        <!-- Search -->
-        <!--<section id="search" class="alt">-->
-          <!--<form method="post" action="#">-->
-            <!--<input type="text" name="query" id="query" placeholder="Search" />-->
-          <!--</form>-->
-        <!--</section>-->
-
-        <!-- Menu -->
-        <nav id="menu">
-          <header class="major">
-            <h2>北京纵横马术</h2>
-          </header>
-          <ul>
-            <li><router-link to="/">首页</router-link></li>
-            <li><router-link to="/generic">关于我们</router-link></li>
-            <li><router-link to="/elements">丰台马场</router-link></li>
-            <li><router-link to="/elements">会员风采</router-link></li>
-            <li><router-link to="/elements">联系我们</router-link></li>
-            <!--<li>-->
-              <!--<span class="opener">Submenu</span>-->
-              <!--<ul>-->
-                <!--<li><a href="#">Lorem Dolor</a></li>-->
-                <!--<li><a href="#">Ipsum Adipiscing</a></li>-->
-                <!--<li><a href="#">Tempus Magna</a></li>-->
-                <!--<li><a href="#">Feugiat Veroeros</a></li>-->
-              <!--</ul>-->
-            <!--</li>-->
-          </ul>
-        </nav>
-
-        <!-- Section -->
-        <section>
-          <header class="major">
-            <h2>免费体验预约</h2>
-          </header>
-          <p>您有一次免费体验的机会,欢迎预约!
-          <br>
-          年龄: 3~60岁
-          <br>
-          时间: 50分钟左右
-          <br>
-          活动: 马房参观,马儿互动,马背骑乘,马术讲解
-          <br>
-          安全: 马场提供专业马术装备,一对一教练指导
-          </p>
-          <form method="post" action="#">
-            <div class="row gtr-uniform">
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="name" id="name" value="" placeholder="姓名" />
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="phone" id="phone" value="" placeholder="电话" />
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="age" id="age" value="" placeholder="年龄" />
-              </div>
-              <!-- Break -->
-              <div class="col-12">
-                <ul class="actions">
-                  <li><input type="submit" value="提 交" class="primary" /></li>
-                </ul>
+  <!-- Footer Area Starts -->
+  <footer class="footer-area section-padding">
+    <div class="footer-widget">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-2 col-lg-3">
+            <div class="single-widget-home mb-5 mb-lg-0">
+              <h3 class="mb-4">top products</h3>
+              <ul>
+                <li class="mb-2"><a href="#">managed website</a></li>
+                <li class="mb-2"><a href="#">managed reputation</a></li>
+                <li class="mb-2"><a href="#">power tools</a></li>
+                <li><a href="#">marketing service</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-5 offset-xl-1 col-lg-6">
+            <div class="single-widget-home mb-5 mb-lg-0">
+              <h3 class="mb-4">newsletter</h3>
+              <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>
+              <form action="#">
+                <input type="email" placeholder="Your email here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email here'" required>
+                <button type="submit" class="template-btn">subscribe now</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-xl-3 offset-xl-1 col-lg-3">
+            <div class="single-widge-home">
+              <h3 class="mb-4">instagram feed</h3>
+              <div class="feed">
+                <img src="static/assets/images/feed1.jpg" alt="feed">
+                <img src="static/assets/images/feed2.jpg" alt="feed">
+                <img src="static/assets/images/feed3.jpg" alt="feed">
+                <img src="static/assets/images/feed4.jpg" alt="feed">
+                <img src="static/assets/images/feed5.jpg" alt="feed">
+                <img src="static/assets/images/feed6.jpg" alt="feed">
+                <img src="static/assets/images/feed7.jpg" alt="feed">
+                <img src="static/assets/images/feed8.jpg" alt="feed">
               </div>
             </div>
-          </form>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-          <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
-
+          </div>
+        </div>
       </div>
     </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-6">
+                            <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;2019 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</span>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="social-icons">
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Area End -->
 
-  </div>
 </div>
 </template>
 <script>

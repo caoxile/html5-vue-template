@@ -1,0 +1,15 @@
+/* 8. Category */
+.single-category {
+    padding: 30px 16px;
+    background: $dark;
+    border: 1px solid $border;
+    @include transition(.3s);
+    &:hover {
+        background: $light;
+        border: 1px solid transparent;
+        @include box-shadow(0px 10px 30px $shadow);
+    }
+    img {
+        margin-bottom: 20px;
+    }
+}
